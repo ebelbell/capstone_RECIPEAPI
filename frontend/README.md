@@ -14,3 +14,9 @@ Project Objective:
 
 Features:
 - CRUD operations (Create, Read, Update, Delete) for recipes, each of which can have an associated list of allergens.
+
+Key Points:
+- Connects to MongoDB using connectDB() from db.mjs.
+- Uses middleware to parse JSON and handle CORS.
+- Mounts the routes defined in recipeRoute.mjs under the /recipe path.
+- Error handling middleware to catch and respond to errors.
