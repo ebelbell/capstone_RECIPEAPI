@@ -1,33 +1,27 @@
-//Imports
-import { useState, useEffect } from "react";
+import React, { useEffect, useState } from 'react';
 import axios from 'axios';
 
-function addRecipe() {
-    const [recipeName, setRecipes] = useState([]); 
+const RecipeList = () => {
+    const [recipes, setRecipes] = useState([]);
 
+    useEffect(() => {
+        // Fetch recipes from the backend
+        axios.get('http://localhost:3000/recipe')
+          .then(response => setRecipes(response.data))
+          .catch(error => console.error('Error fetching recipes:', error));
+    }, []);
 
-useEffect(() => {
-    const fetchRecipes = async () => {
-        try {
-            const response = await axios.get('http://localhost:3000/recipe');
-            setRecipes(response.data);
-        } catch (err) {
-        console.log('Cannot fetch recipes: ', err); 
-        }
-    };
-    fetchRecipes();
-}, []);
-
-return (
-    <div>
-      <h1>Recipe List</h1>
-      <ul>
-        {data.map((recipe) => (
-          <li key={recipe.id}>{recipe.name}</li>
-        ))}
-      </ul>
-    </div>
-  );
-}
+    return (
+        <div>
+            <h1>Recipe List</h1>
+            <ul>
+                {/* iterate over each recipe object and transform each recipe object into a list item */}
+                {recipes.map(recipe => (
+                    <li key={recipe._id}>{recipe.recipeTitle}</li> // create alist item for each recipe by their id
+                ))}
+            </ul>
+        </div>
+    );
+};
 
 export default RecipeList;

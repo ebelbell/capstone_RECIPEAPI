@@ -20,3 +20,11 @@ Key Points:
 - Uses middleware to parse JSON and handle CORS.
 - Mounts the routes defined in recipeRoute.mjs under the /recipe path.
 - Error handling middleware to catch and respond to errors.
+
+---------------------------
+Resources:
+
+- serverBreakDown by @comeaudc to build my backend server
+https://github.com/comeaudc/serverBreakDown
+
+
