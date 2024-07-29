@@ -1,24 +1,27 @@
 import React from 'react';
-import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-import RecipeForm from './components/RecipeForm';
-import Contact from './components/Contact';
-import About from './components/About';
-import Home from './components/Home';
+// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
+// import RecipeForm from '../components/RecipeForm';
+// import Contact from '../components/Contact';
+// import About from '../components/About';
+// import Home from './components/Home';
+
+import './App.css';
 
 
 function App() {
   return (
-    <Router>
+    //<Router>
       <div className="App">
-        <Routes>
+        {/* <Routes>
           <Route path="/" element={< Home />} />
           <Route path="/recipe/new" element={< RecipeForm />} />
           <Route path="/recipe/:id/edit" element={< RecipeForm />} />
           <Route path="/contact/:id" element={< Contact />} />
           <Route path="/about" element={< About />} />
-        </Routes>
+        </Routes> */}
+        <h1>Recipes&Allergens</h1>
       </div>
-    </Router>
+    //</Router>
   );
 }
 
