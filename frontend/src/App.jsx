@@ -5,6 +5,10 @@ import './App.css';
 
 //components
 import Navbar from './components/Navbar';
+import Home from './components/Home';
+import RecipeForm from './components/RecipeForm';
+import SavedRecipe from './components/SavedRecipe'; 
+import About from './components/About';
 
 
 function App() {
@@ -18,7 +22,10 @@ function App() {
         <Navbar />
         <Routes>
           {/* HOME Component */}
-          <Route path='/' exact />
+          <Route path='/' element={<Home />} />
+          <Route path="/recipe-form" element={<RecipeForm />} />
+          <Route path="/recipe/:id" element={<SavedRecipe />} />
+          <Route path="/about" element={<About />} />
         </Routes>
       </Router>
 
