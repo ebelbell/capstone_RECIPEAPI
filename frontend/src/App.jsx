@@ -6,7 +6,8 @@ const App = () => (
     <Router>
         <Routes>
             <Route path="/" element = {
-              <RecipeList />} />
+              <RecipeList />
+            } />
         </Routes>
     </Router>
 );
