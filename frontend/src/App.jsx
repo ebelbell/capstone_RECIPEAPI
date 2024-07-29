@@ -1,27 +1,28 @@
+//imports
 import React from 'react';
-// import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-// import RecipeForm from '../components/RecipeForm';
-// import Contact from '../components/Contact';
-// import About from '../components/About';
-// import Home from './components/Home';
-
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import './App.css';
+
+//components
+import Navbar from './components/Navbar';
 
 
 function App() {
   return (
-    //<Router>
-      <div className="App">
-        {/* <Routes>
-          <Route path="/" element={< Home />} />
-          <Route path="/recipe/new" element={< RecipeForm />} />
-          <Route path="/recipe/:id/edit" element={< RecipeForm />} />
-          <Route path="/contact/:id" element={< Contact />} />
-          <Route path="/about" element={< About />} />
-        </Routes> */}
-        <h1>Recipes&Allergens</h1>
-      </div>
-    //</Router>
+    <>
+      <h1>Recipes&Allergens</h1>
+      
+      {/* ROUTER ------------------ PAGES & PATHS */}
+      <Router>
+        {/* NAVBAR Components*/}
+        <Navbar />
+        <Routes>
+          {/* HOME Component */}
+          <Route path='/' exact />
+        </Routes>
+      </Router>
+
+    </>
   );
 }
 
