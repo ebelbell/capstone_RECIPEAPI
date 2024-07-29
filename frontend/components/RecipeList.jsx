@@ -4,7 +4,7 @@ import axios from 'axios';
 
 function addRecipe() {
     const [recipeName, setRecipes] = useState([]); 
-}
+
 
 useEffect(() => {
     const fetchRecipes = async () => {
@@ -17,5 +17,17 @@ useEffect(() => {
     };
     fetchRecipes();
 }, []);
+
+return (
+    <div>
+      <h1>Recipe List</h1>
+      <ul>
+        {data.map((recipe) => (
+          <li key={recipe.id}>{recipe.name}</li>
+        ))}
+      </ul>
+    </div>
+  );
+}
 
 export default RecipeList;
